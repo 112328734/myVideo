@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/index.css">
+		<script src="https://imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer-2.3.2.js" charset="utf-8"></script>
+		<script src="js/jquery.min.js" charset="utf-8"></script>
+		<script src="data/comment.js" charset="utf-8"></script>
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+				background-color: #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mui-content" style="height: 100%;overflow: hidden;">
+			<video id="my_video" style="width:100%; height:100%;background-color: #000000;" src="http://res.imtt.qq.com/qqbrowser/js/advideo.mp4"
+			 id="ckplayer_a1" x5-video-player-type="h5" preload="metadata" playsinline="true" webkit-playsinline="true" autoplay="true"
+			 x-webkit-airplay="true" x5-video-orientation="portraint" x5-video-player-fullscreen="true">
+			</video>
+
+
+			<div class="home">
+				<a href="javascript:;">
+					<img src="./images/home_3.svg">
+				</a>
+			</div>
+			<!--<div class="person">
+					<div style="text-align: center;"><img class="head-img person_image" id="head-img" src="./images/cbd.jpg"></div>
+					<div style="text-align: center;">
+						天空
+					</div>
+				</div>-->
+			<!--<div class="goods_area">
+					<ul class="mui-table-view" style="border-radius: 10px;">
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+							<div class="mui-media-body">
+								测试商品
+								<p class="mui-ellipsis goods_price"><span class="goods_mark_price">￥100.00</span>&nbsp;
+								<span class="goods_sale_price">售价:￥100.00</span></p>
+							</div>
+						</a>
+					</li>
+				</ul>
+				</div>-->
+			<div class="goods_area">
+				<a href="">
+					<div style="padding: 5px;float: left;"><img src="./images/shuijiao.jpg"></div>
+					<div style="padding: 5px;margin-top: 5px;">
+						<div>测试商品</div>
+						<div><span class="goods_mark_price">￥100.00</span>&nbsp;
+							<span class="goods_sale_price">￥100.00</span></div>
+					</div>
+				</a>
+			</div>
+			<div class="operate">
+				<ul>
+					<li>
+						<div style="text-align: center;">
+							<img class="person_image" src="./images/cbd.jpg" />
+						</div>
+						<div style="text-align: center;">天空</div>
+					</li>
+					<li>
+						<div style="text-align: center;">
+							<img id="heart" data-flag="false" src="./images/unlike.svg" />
+						</div>
+						<div style="text-align: center;">10w</div>
+					</li>
+					<li>
+						<div style="text-align: center;">
+							<img src="./images/message.svg" id="comment-btn" />
+						</div>
+						<div style="text-align: center;">10w</div>
+					</li>
+					<li><img src="./images/share.svg" /></li>
+				</ul>
+			</div>
+			<div class="comment" id="comment" hidden>
+				<div class="title">
+					<span style="font-size: 20px;vertical-align: -webkit-baseline-middle;">213条评论</span>
+					<span style="float: right;font-size: 40px;" id="comment-close" class="mui-icon mui-icon-closeempty"></span>
+				</div>
+				<div class="comment-detail" id="pullrefresh">
+					<div class="mui-scroll">
+						<ul class="mui-table-view" id="comment_detail">
+							<li class="mui-table-view-cell mui-media">
+								<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+								<div class="mui-media-body">
+									幸福111<span class="comment-time">刚刚</span>
+									<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+
+								<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+								<div class="mui-media-body">
+									幸福<span class="comment-time">2020-09-24 11:00:00</span>
+									<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+
+								<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+								<div class="mui-media-body">
+									幸福<span class="comment-time">刚刚</span>
+									<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+
+								<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+								<div class="mui-media-body">
+									幸福<span class="comment-time">刚刚</span>
+									<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+
+								<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+								<div class="mui-media-body">
+									幸福<span class="comment-time">刚刚</span>
+									<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+
+								<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+								<div class="mui-media-body">
+									幸福<span class="comment-time">刚刚</span>
+									<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+
+								<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+								<div class="mui-media-body">
+									幸福<span class="comment-time">刚刚</span>
+									<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="mui-input-row comment-input" style="background-color: #FFFFFF;">
+					<div style="width: 90%;"><textarea class="comment-textarea" id="content" rows="1"
+						 placeholder="请输入评论"></textarea></div>
+					<div style="width: 10%;"><span class="mui-icon mui-icon-paperplane" id="send_comment"></span></div>
+				</div>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script>
+			// var player = TCPlayer('player-container-id', { // player-container-id 为播放器容器 ID，必须与 html 中一致
+			//      appid: 1251659802,
+			// 	fileid: '5285890791109941711',
+			// 	title: '视频标题1',
+			// 	coverImage: 'http://1251659802.vod2.myqcloud.com/vodtranscq1251659802/5285890791109941711/1562237448_1472532171.100_0.jpg',
+			// 	width: 720,
+			// 	height: 1280,
+			// 	autoplay:true,
+			// 	loop:true,
+
+			//   });
+			// var player = new TcPlayer('id_test_video', {
+			// "mp4": "http://res.imtt.qq.com/qqbrowser/js/advideo.mp4", //请替换成实际可用的播放地址
+			// "autoplay" : true,      //iOS 下 safari 浏览器，以及大部分移动端浏览器是不开放视频自动播放这个能力的
+			// "poster" : "http://www.test.com/myimage.jpg",
+			// "width" :  '100%',//视频的显示宽度，请尽量使用视频分辨率宽度
+			// "height" : '100%',//视频的显示高度，请尽量使用视频分辨率高度
+			// "systemFullscreen":true,
+			// "controls":'none',
+			// });
+			// var player = new Aliplayer({
+			//  id: 'J_prismPlayer',
+			//  width: '100%',
+			//  height:'100%',
+			//  videoHeight:'100%',
+			//  useH5Prism:true,
+			//  x5_type:'h5',
+			//  x5_fullscreen:'true',
+			//  autoplay: true,
+			//  //支持播放地址播放,此播放优先级最高
+			//  source : 'https://cloud.video.taobao.com/play/u/4004980432/p/1/e/6/t/1/271303984757.mp4',
+
+			//  region:'cn-shanghai',//eu-central-1,ap-southeast-1
+			//  },function(player){
+			//      console.log('播放器创建好了。')
+			// });
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						callback: pulldownRefresh
+					},
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			var count = 0;
+
+			function pulldownRefresh() {
+				var data = commentData;
+				var count = data.count + 1;
+				setTimeout(function() {
+					var table = document.body.querySelector('.mui-table-view');
+					//var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for (var i = 0; i < count; i++) {
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell mui-media';
+						li.innerHTML = '<img class="mui-media-object mui-pull-left" src="' + data.data[i].img + '">' +
+							'<div class="mui-media-body">' + data.data[i].name + '<span class="comment-time">刚刚</span>' +
+							'<p>' + data.data[i].comment + '</p>' +
+							'</div>';
+						//下拉刷新，新纪录插到最前面；
+						table.insertBefore(li, table.firstChild);
+					}
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1500);
+			}
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+				var data = commentData;
+				var count = data.count;
+				setTimeout(function() {
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+					var table = document.body.querySelector('.mui-table-view');
+					//var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for (var i = 0; i < count; i++) {
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell mui-media';
+						li.innerHTML = '<img class="mui-media-object mui-pull-left" src="' + data.data[i].img + '">' +
+							'<div class="mui-media-body">' + data.data[i].name + '<span class="comment-time">刚刚</span>' +
+							'<p>' + data.data[i].comment + '</p>' +
+							'</div>';
+						table.appendChild(li);
+					}
+				}, 1500);
+			}
+			$(document).ready(function() {
+
+				// mui.alert('观看视频会产生流量，请注意您的流量', 'Hello MUI', function() {
+				// 	var video = document.getElementById("my_video");
+				// 	 video.play();
+				// });
+				$("#comment-btn").click(function() {
+					$("#comment").show();
+				});
+				$("#comment-close").click(function() {
+					$("#comment").hide();
+				});
+				$("#heart").click(function() {
+					var flag = $("#heart").attr('data-flag');
+					if (flag == 'false') {
+						$("#heart").attr('src', './images/like.svg');
+						$("#heart").attr('data-flag', 'true');
+					} else {
+						$("#heart").attr('src', './images/unlike.svg');
+						$("#heart").attr('data-flag', 'false');
+					}
+
+				});
+				$("#send_comment").click(function() {
+					var table = document.body.querySelector('.mui-table-view');
+					var content = $("#content").val();
+					if (!isNaN(content)) {
+						mui.alert('请输入评论内容', 'Hello MUI', function() {});
+						return false;
+					}
+					//var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					var li = document.createElement('li');
+					li.className = 'mui-table-view-cell mui-media';
+					li.innerHTML = '<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">' +
+						'<div class="mui-media-body">aa<span class="comment-time">刚刚</span>' +
+						'<p>' + content + '</p>' +
+						'</div>';
+					//下拉刷新，新纪录插到最前面；
+					table.insertBefore(li, table.firstChild);
+					$("#content").val("");
+					//$("#comment").animate({scrollTop:0},1);
+					$(".mui-scroll").css('transform', 'translate3d(0px, 0px, 0px) translateZ(0px)');
+				});
+			});
+		</script>
+	</body>
+
+</html>

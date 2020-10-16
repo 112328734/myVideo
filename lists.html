@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/index.css">
+		<script src="https://imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer-2.3.2.js" charset="utf-8"></script>
+		<script src="js/jquery.min.js" charset="utf-8"></script>
+		<script src="data/comment.js" charset="utf-8"></script>
+		<script src="data/list.js" charset="utf-8"></script>
+		<link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
+		<script src="js/swiper/swiper-bundle.min.js" charset="utf-8"></script>
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+				background-color: #000000;
+			}
+
+			.mui-content {
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="home_menu">
+			<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				<div class="home">
+					<a href="javascript:;">
+						<img src="./images/home_3.svg">
+					</a>
+				</div>
+				<div id='tab-menu'>
+					<a class="mui-control-item  mui-active" href="#recomment" data-flag="recomment">
+						推荐
+					</a>
+					<a class="mui-control-item " href="#hot" data-flag="hot">
+						热点
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="mui-slider-group">
+			<div id="recomment" class="mui-slider-item mui-control-content mui-active">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-content swiper-container" id="recomment-swiper-container" style="height: 100%;">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<video id="recomment-video-1" style="width:100%; height:100%;background-color: #000000;" src="http://res.imtt.qq.com/qqbrowser/js/advideo.mp4"
+								 x5-video-player-type="h5" preload="metadata" playsinline="true" webkit-playsinline="true" autoplay="true"
+								 x-webkit-airplay="true" x5-video-orientation="portraint" x5-video-player-fullscreen="true" loop="true">
+								</video>
+								<div class="goods_area">
+									<a href="">
+										<div style="padding: 5px;float: left;"><img src="./images/shuijiao.jpg"></div>
+										<div style="padding: 5px;margin-top: 5px;">
+											<div>测试商品热点111</div>
+											<div><span class="goods_mark_price">￥100.00</span>&nbsp;
+												<span class="goods_sale_price">￥100.00</span></div>
+										</div>
+									</a>
+								</div>
+								<div class="operate">
+									<ul>
+										<li>
+											<div style="text-align: center;">
+												<img class="person_image" src="./images/cbd.jpg" />
+											</div>
+											<div style="text-align: center;">天空</div>
+										</li>
+										<li>
+											<div style="text-align: center;">
+												<img class="like" data-flag="false" src="./images/unlike.svg" />
+											</div>
+											<div style="text-align: center;">10w</div>
+										</li>
+										<li>
+											<div style="text-align: center;">
+												<img src="./images/message.svg" class="comment-btn" />
+											</div>
+											<div style="text-align: center;">10w</div>
+										</li>
+									</ul>
+								</div>
+								<div class="video_info">
+									<div class="video_title">@视频标题</div>
+									<div class="video_sub_title">#视频描述视频描述视频描述视频描述视频描述视频描述</div>
+								</div>
+								<div class="comment" id="recomment-comment-1" hidden>
+									<div class="title">
+										<span style="font-size: 20px;vertical-align: -webkit-baseline-middle;">213条评论</span>
+										<span style="float: right;font-size: 40px;" class="mui-icon mui-icon-closeempty"></span>
+									</div>
+									<div class="comment-detail" id="recomment-pullrefresh-1">
+										<div class="mui-scroll">
+											<ul class="mui-table-view" id="comment_detail">
+												<li class="mui-table-view-cell mui-media">
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福111<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">2020-09-24 11:00:00</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="mui-input-row comment-input" style="background-color: #FFFFFF;">
+										<div style="width: 90%;"><textarea class="comment-textarea" id="recomment-content-1" rows="1" placeholder="请输入评论"></textarea></div>
+										<div style="width: 10%;"><span class="mui-icon mui-icon-paperplane send_comment"></span></div>
+									</div>
+								</div>
+								<input type="hidden" id="data-id-1" value="1">
+							</div>
+							<div class="swiper-slide">
+								<video id="recomment-video-2" style="width:100%; height:100%;background-color: #000000;" src="http://res.imtt.qq.com/qqbrowser/js/advideo.mp4"
+								 id="ckplayer_a1" x5-video-player-type="h5" preload="metadata" playsinline="true" webkit-playsinline="true"
+								 autoplay="true" x-webkit-airplay="true" x5-video-orientation="portraint" x5-video-player-fullscreen="true">
+								</video>
+								<div class="goods_area">
+									<a href="">
+										<div style="padding: 5px;float: left;"><img src="./images/shuijiao.jpg"></div>
+										<div style="padding: 5px;margin-top: 5px;">
+											<div>测试商品111</div>
+											<div><span class="goods_mark_price">￥100.00</span>&nbsp;
+												<span class="goods_sale_price">￥100.00</span></div>
+										</div>
+									</a>
+								</div>
+								<div class="operate">
+									<ul>
+										<li>
+											<div style="text-align: center;">
+												<img class="person_image" src="./images/cbd.jpg" />
+											</div>
+											<div style="text-align: center;">天空</div>
+										</li>
+										<li>
+											<div style="text-align: center;">
+												<img class="like" data-flag="false" src="./images/unlike.svg" />
+											</div>
+											<div style="text-align: center;">10w</div>
+										</li>
+										<li>
+											<div style="text-align: center;">
+												<img src="./images/message.svg" class="comment-btn" />
+											</div>
+											<div style="text-align: center;">10w</div>
+										</li>
+									</ul>
+								</div>
+								<div class="video_title">
+									<span>@视频标题</span>
+									<span>#视频描述视频描述视频描述视频描述视频描述视频描述</span>
+								</div>
+								<div class="comment" id="recomment-comment-2" hidden>
+									<div class="title">
+										<span style="font-size: 20px;vertical-align: -webkit-baseline-middle;">213条评论</span>
+										<span style="float: right;font-size: 40px;" class="mui-icon mui-icon-closeempty"></span>
+									</div>
+									<div class="comment-detail" id="recomment-pullrefresh-2">
+										<div class="mui-scroll">
+											<ul class="mui-table-view" id="comment_detail">
+												<li class="mui-table-view-cell mui-media">
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福111<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">2020-09-24 11:00:00</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="mui-input-row comment-input" style="background-color: #FFFFFF;">
+										<div style="width: 90%;"><textarea class="comment-textarea" id="recomment-content-2" rows="1" placeholder="请输入评论"></textarea></div>
+										<div style="width: 10%;"><span class="mui-icon mui-icon-paperplane send_comment"></span></div>
+									</div>
+								</div>
+								<input type="hidden" id="data-id-1" value="1">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="hot" class="mui-slider-item mui-control-content">
+				<div id="scroll1" class="mui-scroll-wrapper">
+					<div class="mui-content swiper-container" id="hot-swiper-container" style="height: 100%;overflow: hidden;">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<video id="hot-video-1" style="width:100%; height:100%;background-color: #000000;" src="http://res.imtt.qq.com/qqbrowser/js/advideo.mp4"
+								 loop="loop" x5-video-player-type="h5" preload="metadata" playsinline="true" webkit-playsinline="true" autoplay="true"
+								 x-webkit-airplay="true" x5-video-orientation="portraint" x5-video-player-fullscreen="true">
+								</video>
+								<div class="goods_area">
+									<a href="">
+										<div style="padding: 5px;float: left;"><img src="./images/shuijiao.jpg"></div>
+										<div style="padding: 5px;margin-top: 5px;">
+											<div class="good_title">测试商品热点</div>
+											<div class="good_sub_title"><span class="goods_mark_price">￥100.00</span>&nbsp;
+												<span class="goods_sale_price">￥100.00</span></div>
+										</div>
+									</a>
+								</div>
+								<div class="operate">
+									<ul>
+										<li>
+											<div style="text-align: center;">
+												<img class="person_image" src="./images/cbd.jpg" />
+											</div>
+											<div style="text-align: center;">天空</div>
+										</li>
+										<li>
+											<div style="text-align: center;">
+												<img class="like" data-flag="false" src="./images/unlike.svg" />
+											</div>
+											<div style="text-align: center;">10w</div>
+										</li>
+										<li>
+											<div style="text-align: center;">
+												<img src="./images/message.svg" class="comment-btn" />
+											</div>
+											<div style="text-align: center;">10w</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="comment" id="hot-comment-1" hidden>
+									<div class="title">
+										<span style="font-size: 20px;vertical-align: -webkit-baseline-middle;">213条评论</span>
+										<span style="float: right;font-size: 40px;" id="comment-close" class="mui-icon mui-icon-closeempty"></span>
+									</div>
+									<div class="comment-detail" id="hot-pullrefresh-1">
+										<div class="mui-scroll">
+											<ul class="mui-table-view" id="comment_detail">
+												<li class="mui-table-view-cell mui-media">
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福111<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">2020-09-24 11:00:00</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="mui-input-row comment-input" style="background-color: #FFFFFF;">
+										<div style="width: 90%;"><textarea class="comment-textarea" id="hot-content-1" rows="1" placeholder="请输入评论"></textarea></div>
+										<div style="width: 10%;"><span class="mui-icon mui-icon-paperplane" id="send_comment"></span></div>
+									</div>
+								</div>
+
+							</div>
+							<div class="swiper-slide">
+								<video id="hot-video-2" style="width:100%; height:100%;background-color: #000000;" src="http://res.imtt.qq.com/qqbrowser/js/advideo.mp4"
+								 id="ckplayer_a1" loop="loop" x5-video-player-type="h5" preload="metadata" playsinline="true"
+								 webkit-playsinline="true" autoplay="true" x-webkit-airplay="true" x5-video-orientation="portraint"
+								 x5-video-player-fullscreen="true">
+								</video>
+								<div class="goods_area">
+									<a href="">
+										<div style="padding: 5px;float: left;"><img src="./images/shuijiao.jpg"></div>
+										<div style="padding: 5px;margin-top: 5px;">
+											<div>测试商品111</div>
+											<div><span class="goods_mark_price">￥100.00</span>&nbsp;
+												<span class="goods_sale_price">￥100.00</span></div>
+										</div>
+									</a>
+								</div>
+								<div class="operate">
+									<ul>
+										<li>
+											<div style="text-align: center;">
+												<img class="person_image" src="./images/cbd.jpg" />
+											</div>
+											<div style="text-align: center;">天空</div>
+										</li>
+										<li>
+											<div style="text-align: center;">
+												<img class="like" data-flag="false" src="./images/unlike.svg" />
+											</div>
+											<div style="text-align: center;">10w</div>
+										</li>
+										<li>
+											<div style="text-align: center;">
+												<img src="./images/message.svg" class="comment-btn" />
+											</div>
+											<div style="text-align: center;">10w</div>
+										</li>
+									</ul>
+								</div>
+								<div class="comment" id="hot-comment-2" hidden>
+									<div class="title">
+										<span style="font-size: 20px;vertical-align: -webkit-baseline-middle;">213条评论</span>
+										<span style="float: right;font-size: 40px;" class="mui-icon mui-icon-closeempty close"></span>
+									</div>
+									<div class="comment-detail" id="hot-pullrefresh-2">
+										<div class="mui-scroll">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell mui-media">
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福111<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">2020-09-24 11:00:00</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+												<li class="mui-table-view-cell mui-media">
+
+													<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+													<div class="mui-media-body">
+														幸福<span class="comment-time">刚刚</span>
+														<p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="mui-input-row comment-input" style="background-color: #FFFFFF;">
+										<div style="width: 90%;"><textarea class="comment-textarea" id="content" rows="1" placeholder="请输入评论"></textarea></div>
+										<div style="width: 10%;"><span class="mui-icon mui-icon-paperplane" id="send_comment"></span></div>
+									</div>
+									<div class="mui-input-row comment-input" style="background-color: #FFFFFF;">
+										<div style="width: 90%;"><textarea class="comment-textarea" id="hot-content-2" rows="1" placeholder="请输入评论"></textarea></div>
+										<div style="width: 10%;"><span class="mui-icon mui-icon-paperplane send_comment"></span></div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.pullToRefresh.js"></script>
+		<script src="js/mui.pullToRefresh.material.js"></script>
+		<script>
+			mui.alert('观看视频会产生流量，请注意您的流量', 'Hello MUI', function() {
+				var video = document.getElementById("recomment-video-1");
+				video.play();
+			});
+			var recommentSwiper = new Swiper('#recomment-swiper-container', {
+				direction: 'vertical',
+				observer: true,
+				observeParents: true,
+				on: {
+					reachEnd: function() {
+						appendSlide();
+					},
+					slideNextTransitionStart: function(swiper) {
+						videoPlay();
+					},
+					slidePrevTransitionStart: function(swiper){
+						videoPlay();
+					},
+				}
+			});
+
+			var hotSwiper = new Swiper('#hot-swiper-container', {
+				direction: 'vertical',
+				observer: true,
+				observeParents: true,
+				on: {
+					reachEnd: function() {
+						appendSlide();
+					},
+					slideNextTransitionStart: function(swiper) {
+						videoPlay();
+					},
+				    slidePrevTransitionStart: function(swiper){
+					  videoPlay();
+					},
+				}
+			});
+
+			//视频播放
+			function videoPlay() {
+				var dataType = $(".mui-active").attr('data-flag');
+				console.log(recommentSwiper.activeIndex);
+				if (dataType == 'recomment') {
+					var index = recommentSwiper.activeIndex + 1;
+					var slidesIndex = recommentSwiper.slides.length + 1;
+				} else {
+					var index = hotSwiper.activeIndex + 1;
+					var slidesIndex = hotSwiper.slides.length + 1;
+				}
+				if (index > slidesIndex) {
+					return;
+				}
+				var video = document.getElementById(dataType + "-video-" + index);
+				$('video').trigger('pause');
+				video.play();
+			}
+			$(".like").bind('click', function(e) {
+				// var flag = $(this).attr('data-flag');
+				// if (flag == 'false') {
+				// 	$(this).attr('src', './images/like.svg');
+				// 	$(this).attr('data-flag', 'true');
+				// } else {
+				// 	$(this).attr('src', './images/unlike.svg');
+				// 	$(this).attr('data-flag', 'false');
+				// }
+				clickLike($(this));
+			});
+
+			function clickLike(obj) {
+				var flag = $(obj).attr('data-flag');
+
+				if (flag == 'false') {
+					console.log('like');
+					$(obj).attr('src', './images/like.svg');
+					$(obj).attr('data-flag', 'true');
+				} else {
+					console.log('unlike');
+					$(obj).attr('src', './images/unlike.svg');
+					$(obj).attr('data-flag', 'false');
+				}
+				return;
+			}
+
+			$(".comment-btn").bind('click', function(e) {
+				clickComment();
+			});
+
+			function clickComment() {
+				var dataType = $(".mui-active").attr('data-flag');
+				if (dataType == 'recomment') {
+					var index = recommentSwiper.activeIndex + 1;
+				} else {
+					var index = hotSwiper.activeIndex + 1;
+				}
+				var commentKey = dataType + "-comment-" + index;
+				console.log(commentKey);
+				var pullRefreshKey = dataType + "-pullrefresh-" + index;
+				if (dataType == 'recomment') {
+					//recommentSwiper.allowSlideNext = false;
+					recommentSwiper.allowTouchMove = false;
+				} else {
+					//hotSwiper.allowSlideNext = false;
+					hotSwiper.allowTouchMove = false;
+				}
+
+				mui("#" + pullRefreshKey).pullRefresh({
+					down: {
+						callback: pulldownRefresh
+					},
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				})
+				$("#" + commentKey).show();
+			}
+
+			mui("#tab-menu").on('tap', 'a', function() {
+				var dataType = $(this).attr('data-flag');
+
+				if (dataType == 'recomment') {
+					var index = recommentSwiper.activeIndex + 1;
+				} else {
+					var index = hotSwiper.activeIndex + 1;
+				}
+				var video = document.getElementById(dataType + '-video-' + index);
+				$('video').trigger('pause');
+				video.play();
+			})
+
+
+			$(".mui-icon-closeempty").click(function() {
+				// var index = recommentSwiper.activeIndex + 1;
+				// var dataType = $("a[class='mui-control-item mui-active']").attr('data-flag');
+				// var commentKey = dataType + "-comment-" + index;
+
+				// recommentSwiper.allowSlideNext = true;
+				// recommentSwiper.allowTouchMove = true;
+				// $("#" + commentKey).hide();
+				closeComment();
+			});
+
+			function closeComment() {
+				var dataType = $(".mui-active").attr('data-flag');
+				if (dataType == 'recomment') {
+					var index = recommentSwiper.activeIndex + 1;
+				} else {
+					var index = hotSwiper.activeIndex + 1;
+				}
+				var commentKey = dataType + "-comment-" + index;
+
+				if (dataType == 'recomment') {
+					//recommentSwiper.allowSlideNext = true;
+					recommentSwiper.allowTouchMove = true;
+				} else {
+					//hotSwiper.allowSlideNext = true;
+					hotSwiper.allowTouchMove = true;
+				}
+
+				$("#" + commentKey).hide();
+			}
+			//获取下一页推荐数据
+			function appendSlide() {
+
+				var dataType = $(".mui-active").attr('data-flag');
+				console.log(dataType);
+				listsData = videolistsData.data;
+				if (dataType == 'recomment') {
+					var slidesIndex = recommentSwiper.slides.length + 1;
+				} else {
+					var slidesIndex = hotSwiper.slides.length + 1;
+				}
+				for (var i = 0; i < listsData.length; i++) {
+					var numIndex = slidesIndex + i;
+					var silder = '<div class="swiper-slide">' +
+						'<video id="' + dataType + '-video-' + numIndex +
+						'" style="width:100%; height:100%;background-color: #000000;" src="' +
+						listsData[i].video_url + '"' +
+						'id="ckplayer_a1" loop="loop" x5-video-player-type="h5" preload="metadata" playsinline="true" webkit-playsinline="true"' +
+						'autoplay="true" x-webkit-airplay="true" x5-video-orientation="portraint" x5-video-player-fullscreen="true">' +
+						'</video>';
+					if (listsData[i].goods_type == 1) {
+						var goodHtml = '<span id="goods_mark_price" class="goods_mark_price">￥' + listsData[i].goods_mark_price +
+							'</span>&nbsp;' +
+							'<span id="goods_sale_price" class="goods_sale_price">￥' + listsData[i].goods_sale_price + '</span>';
+
+					} else {
+						var goodHtml = listsData[i].goods_sub_title;
+					}
+					silder += '<div class="goods_area">' +
+						'<a href="' + listsData[i].goods_link + '">' +
+						'<div style="padding: 5px;float: left;"><img src="' + listsData[i].goods_img + '"></div>' +
+						'<div style="padding: 5px;margin-top: 5px;">' +
+						'<div class="good_title">' + listsData[i].goods_title + '</div>' +
+						'<div class="good_sub_title">' + goodHtml + '</div>' +
+						'</div>' +
+						'</a>' +
+						'</div>';
+					var like_src = "./images/unlike.svg";
+					if (listsData[i].is_like == 2) {
+						like_src = "./images/like.svg";
+					}
+					silder += '<div class="operate">' +
+						'<ul>' +
+						'<li>' +
+						'<div style="text-align: center;">' +
+						'<img class="person_image" src="./images/cbd.jpg" />' +
+						'</div>' +
+						'<div style="text-align: center;">天空</div>' +
+						'</li>' +
+						'<li>' +
+						'<div style="text-align: center;">' +
+						'<img class="like" data-flag="false" src="' + like_src + '" />' +
+						'</div>' +
+						'<div style="text-align: center;">' + listsData[i].like_num + '</div>' +
+						'</li>' +
+						'<li>' +
+						'<div style="text-align: center;">' +
+						'<img src="./images/message.svg" class="comment-btn" />' +
+						'</div>' +
+						'<div style="text-align: center;">' + listsData[i].comment_num + '</div>' +
+						'</li>' +
+						'</ul>' +
+						'</div>';
+					silder += '<div class="comment" id="' + dataType + '-comment-' + numIndex + '" hidden>' +
+						'<div class="title">' +
+						'<span style="font-size: 20px;vertical-align: -webkit-baseline-middle;">' + listsData[i].comment_num +
+						'条评论</span>' +
+						'<span style="float: right;font-size: 40px;" class="mui-icon mui-icon-closeempty"></span>' +
+						'</div>' +
+						'<div class="comment-detail" id="' + dataType + '-pullrefresh-' + numIndex + '">' +
+						'<div class="mui-scroll">' +
+						'<ul class="mui-table-view">';
+					var count = listsData[i].comment_list.data.length;
+					var commentDetailList = listsData[i].comment_list.data;
+					//var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for (var ci = 0; ci < count; ci++) {
+						silder += '<li class="mui-table-view-cell mui-media">' +
+							'<img class="mui-media-object mui-pull-left" src="' + commentDetailList[ci].img + '">' +
+							'<div class="mui-media-body">' +
+							commentDetailList[ci].name + '<span class="comment-time">' + commentDetailList[ci].publish_time + '</span>' +
+							'<p>' + commentDetailList[ci].comment + '</p>' +
+							'</div>' +
+							'</li>';
+					}
+					silder += '</ul></div></div>';
+					silder += '<div class="mui-input-row comment-input" style="background-color: #FFFFFF;">' +
+						'<div style="width: 90%;"><textarea class="comment-textarea" id="' + dataType + '-content-' + numIndex +
+						'" rows="1" placeholder="请输入评论"></textarea></div>' +
+						'<div style="width: 10%;"><span class="mui-icon mui-icon-paperplane send_comment"></span></div>' +
+						'</div>';
+					if (dataType == 'recomment') {
+						recommentSwiper.appendSlide(silder);
+					} else {
+						hotSwiper.appendSlide(silder);
+					}
+
+
+				}
+				$(".like").bind('click', function(e) {
+					clickLike($(this));
+				});
+				$(".comment-btn").bind('click', function(e) {
+					clickComment();
+				});
+				$(".mui-icon-closeempty").bind('click', function(e) {
+					closeComment();
+				});
+				$(".send_comment").bind('click', function(e) {
+					sendComment();
+				});
+
+
+			}
+
+
+			$(".send_comment").click(function() {
+				sendComment();
+			});
+
+			function sendComment() {
+
+				var dataType = $(".mui-active").attr('data-flag');
+				if (dataType == 'recomment') {
+					var index = recommentSwiper.activeIndex + 1;
+				} else {
+					var index = hotSwiper.activeIndex + 1;
+				}
+
+				var contentKey = dataType + "-content-" + index;
+				var content = $("#" + contentKey).val();
+				if (!isNaN(content)) {
+
+					return false;
+				}
+				var commentKey = dataType + "-comment-" + index;
+				var table = $("#" + commentKey).find("ul");
+				//var cells = document.body.querySelectorAll('.mui-table-view-cell');
+				var li = document.createElement('li');
+				li.className = 'mui-table-view-cell mui-media';
+				li.innerHTML = '<img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">' +
+					'<div class="mui-media-body">aa<span class="comment-time">刚刚</span>' +
+					'<p>' + content + '</p>' +
+					'</div>';
+				//下拉刷新，新纪录插到最前面；
+				table.prepend(li, table.firstChild);
+				$("#" + contentKey).val("");
+				//$("#comment").animate({scrollTop:0},1);
+				$(".mui-scroll").css('transform', 'translate3d(0px, 0px, 0px) translateZ(0px)');
+			}
+
+
+			// var myHotSwiper = new Swiper('#hot_swiper',{
+			// 	direction : 'vertical',
+			// 	onReachEnd: function(swiper){
+			// 	     //mySwiper.appendSlide('<div class="swiper-slide">这是一个新的slide</div>'); 
+			// 		 console.log('myHotSwiper');
+			// 	}
+			// });
+
+			function pulldownRefresh() {
+				var data = commentData;
+				var count = data.count + 1;
+				setTimeout(function() {
+
+					var dataType = $(".mui-active").attr('data-flag');
+					if (dataType == 'recomment') {
+						var index = recommentSwiper.activeIndex + 1;
+					} else {
+						var index = hotSwiper.activeIndex + 1;
+					}
+					var commentKey = dataType + "-comment-" + index;
+					var pullRefreshKey = dataType + "-pullrefresh-" + index;
+					var table = $("#" + commentKey).find("ul");
+					//var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for (var i = 0; i < count; i++) {
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell mui-media';
+						li.innerHTML = '<img class="mui-media-object mui-pull-left" src="' + data.data[i].img + '">' +
+							'<div class="mui-media-body">' + data.data[i].name + '<span class="comment-time">刚刚</span>' +
+							'<p>' + data.data[i].comment + '</p>' +
+							'</div>';
+						//下拉刷新，新纪录插到最前面；
+						table.prepend(li, table.firstChild);
+					}
+					mui('#' + pullRefreshKey).pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1500);
+			}
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+				var data = commentData;
+				var count = data.count;
+				setTimeout(function() {
+					var dataType = $(".mui-active").attr('data-flag');
+					if (dataType == 'recomment') {
+						var index = recommentSwiper.activeIndex + 1;
+					} else {
+						var index = hotSwiper.activeIndex + 1;
+					}
+					var commentKey = dataType + "-comment-" + index;
+					var pullRefreshKey = dataType + "-pullrefresh-" + index;
+					var table = $("#" + commentKey).find("ul");
+					mui('#' + pullRefreshKey).pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+					//var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for (var i = 0; i < count; i++) {
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell mui-media';
+						li.innerHTML = '<img class="mui-media-object mui-pull-left" src="' + data.data[i].img + '">' +
+							'<div class="mui-media-body">' + data.data[i].name + '<span class="comment-time">刚刚</span>' +
+							'<p>' + data.data[i].comment + '</p>' +
+							'</div>';
+						table.append(li);
+					}
+				}, 1500);
+			}
+			$('input,textarea').blur(function() {
+				setTimeout(function() {
+					window.scrollTo(0, 100);
+				}, 100)
+			});
+		</script>
+	</body>
+
+</html>
